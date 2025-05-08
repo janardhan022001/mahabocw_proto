@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maharashtra Building And Other Construction Workers Welfare Board</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    .slider {
+      position: relative;
+      width: 100%;
+      max-height: 400px;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      width: 100%;
+      animation: slide 12s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0%);
+      }
+
+      33% {
+        transform: translateX(-100%);
+      }
+
+      66% {
+        transform: translateX(-200%);
+      }
+
+      100% {
+        transform: translateX(0%);
+      }
+    }
+
+    .dots {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin: 0 4px;
+      background: #bbb;
+      border-radius: 50%;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f0f2f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Accessibility Bar */
+    .accessibility-bar {
+      background-color: #0d3b66;
+      color: white;
+      padding: 8px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .font-controls a {
+      color: white;
+      text-decoration: none;
+      margin: 0 5px;
+      font-weight: bold;
+      padding: 2px 6px;
+      border-radius: 3px;
+      transition: background-color 0.3s;
+    }
+
+    .font-controls a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .language-selector {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .language-selector:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Header Section */
+    .header {
+      background-color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      height: 70px;
+      transition: transform 0.3s;
+    }
+
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    .board-title {
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .board-title h1 {
+      color: #1a5f7a;
+      font-size: 26px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .board-title h2 {
+      color: #1a5f7a;
+      font-size: 18px;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    /* Navigation */
+    .main-nav {
+      background: linear-gradient(135deg, #2c7da0 0%, #1a5f7a 100%);
+      padding: 0;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .main-nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .main-nav li {
+      position: relative;
+    }
+
+    .main-nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      display: block;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      background-color: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .main-nav a.active {
+      box-shadow: inset 0 -3px 0 rgba(255, 255, 255, 0.7);
+    }
+
+    .main-nav .dropdown-toggle::after {
+      content: "\f078";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      margin-left: 5px;
+      font-size: 10px;
+      transition: transform 0.3s;
+    }
+
+    .main-nav a:hover .dropdown-toggle::after {
+      transform: rotate(180deg);
+    }
+
+    /* Marquee Text */
+    .marquee-container {
+      background: linear-gradient(135deg, #003049 0%, #2a9d8f 100%);
+      padding: 12px 0;
+      overflow: hidden;
+      color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+
+    .marquee-text {
+      white-space: nowrap;
+      display: inline-block;
+      animation: marquee 30s linear infinite;
+      padding-left: 100%;
+      font-size: 16px;
+      font-weight: 500;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translate(0, 0);
+      }
+
+      100% {
+        transform: translate(-100%, 0);
+      }
+    }
+
+    /* Main Content */
+    .main-content {
+      padding: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Notice Section */
+    .notice {
+      background: linear-gradient(145deg, #003049 0%, #2a9d8f 100%);
+      color: #ffffff;
+      padding: 25px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      text-align: justify;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .notice h2 {
+      margin-bottom: 15px;
+      font-size: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .notice p {
+      margin-bottom: 12px;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* Service Icons */
+    .service-icons {
+      display: flex;
+      justify-content: stretch;
+      flex-wrap: wrap;
+      margin: 30px 0;
+      gap: 15px;
+    }
+
+    .service-icon {
+      flex: 1;
+      min-width: calc(16.66% - 15px);
+      text-align: center;
+      color: white;
+      padding: 25px 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      height: 140px;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-weight: 500;
+    }
+
+    .service-icon:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-icon i {
+      font-size: 32px;
+      margin-bottom: 15px;
+      transition: transform 0.3s;
+    }
+
+    .service-icon:hover i {
+      transform: scale(1.15);
+    }
+
+    .service-icon:nth-child(1) {
+      background: linear-gradient(145deg, #2a7f33 0%, #1d5524 100%);
+    }
+
+    .service-icon:nth-child(2) {
+      background: linear-gradient(145deg, #2c7da0 0%, #1a5f7a 100%);
+    }
+
+    .service-icon:nth-child(3) {
+      background: linear-gradient(145deg, #254f91 0%, #1a3a6d 100%);
+    }
+
+    .service-icon:nth-child(4) {
+      background: linear-gradient(145deg, #40916c 0%, #2d6a4f 100%);
+    }
+
+    .service-icon:nth-child(5) {
+      background: linear-gradient(145deg, #2a7f33 0%, #1d5524 100%);
+    }
+
+    .service-icon:nth-child(6) {
+      background: linear-gradient(145deg, #0099bd 0%, #00819e 100%);
+    }
+
+    /* Regulations Section */
+    .regulations {
+      background-color: white;
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .regulations h2 {
+      color: #2a2a2a;
+      margin-bottom: 20px;
+      font-size: 22px;
+      font-weight: 600;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+
+    .regulations p {
+      color: #444;
+      margin-bottom: 15px;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .regulations ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .regulations li {
+      margin-bottom: 12px;
+      color: #444;
+      position: relative;
+      padding-left: 5px;
+    }
+
+    .regulations a {
+      color: #0d6efd;
+      text-decoration: none;
+      transition: color 0.3s, border-bottom 0.3s;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+    }
+
+    .regulations a:hover {
+      color: #0a58ca;
+      border-bottom: 1px solid #0a58ca;
+    }
+
+    /* Collapsible Sections */
+    .collapsible {
+      background: linear-gradient(145deg, #2c7da0 0%, #1a5f7a 100%);
+      color: white;
+      cursor: pointer;
+      padding: 18px 25px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 17px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .collapsible-active,
+    .collapsible:hover {
+      background: linear-gradient(145deg, #3d8daf 0%, #2a6e89 100%);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .collapsible-content {
+      padding: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.4s ease;
+      background-color: white;
+      margin-bottom: 15px;
+      border-radius: 0 0 6px 6px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .collapsible:after {
+      content: '\002B';
+      color: white;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+      font-size: 22px;
+      transition: transform 0.3s ease;
+    }
+
+    .collapsible-active:after {
+      content: "\2212";
+      transform: rotate(90deg);
+    }
+
+    .collapsible-content div {
+      padding: 20px 25px;
+    }
+
+    /* Styling content inside collapsible sections */
+    .collapsible-content h3 {
+      color: #2a2a2a;
+      margin-bottom: 15px;
+      font-size: 18px;
+      font-weight: 600;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .collapsible-content p {
+      color: #444;
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+
+    .collapsible-content ul {
+      padding-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    .collapsible-content li {
+      margin-bottom: 10px;
+      color: #444;
+      position: relative;
+    }
+
+    /* Contact Info */
+    .contact-section {
+      background-color: white;
+      padding: 25px;
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      gap: 20px;
+    }
+
+    .contact-card {
+      flex: 1;
+      min-width: 250px;
+      display: flex;
+      align-items: flex-start;
+      padding: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 6px;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+      background-color: #f9f9f9;
+    }
+
+    .contact-icon {
+      width: 60px;
+      height: 60px;
+      background-color: rgba(26, 95, 122, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .contact-card:hover .contact-icon {
+      background-color: rgba(26, 95, 122, 0.2);
+    }
+
+    .contact-icon i {
+      color: #1a5f7a;
+      font-size: 24px;
+    }
+
+    .contact-details h3 {
+      color: #888;
+      font-size: 14px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .contact-details p {
+      margin-bottom: 8px;
+      color: #333;
+      font-size: 15px;
+    }
+
+    .contact-details a {
+      color: #0d6efd;
+      text-decoration: none;
+      transition: color 0.3s;
+      font-weight: 500;
+    }
+
+    .contact-details a:hover {
+      color: #0a58ca;
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    .footer {
+      background: linear-gradient(135deg, #1a3a6d 0%, #0d2b56 100%);
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 30px;
+      box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .service-icon {
+        min-width: calc(33.33% - 15px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+      }
+
+      .board-title {
+        margin: 15px 0;
+      }
+
+      .board-title h1 {
+        font-size: 22px;
+      }
+
+      .board-title h2 {
+        font-size: 16px;
+      }
+
+      .main-nav ul {
+        flex-direction: column;
+      }
+
+      .main-nav a {
+        padding: 12px 20px;
+      }
+
+      .main-content {
+        padding: 20px 15px;
+      }
+
+      .service-icon {
+        min-width: calc(50% - 15px);
+      }
+
+      .contact-section {
+        flex-direction: column;
+      }
+
+      .notice,
+      .regulations,
+      .collapsible,
+      .contact-section {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .service-icon {
+        min-width: 100%;
+      }
+
+      .contact-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+
+      .accessibility-bar {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    .footer {
+      background-color: #333;
+      /* Dark grey background */
+      color: #fff;
+      /* White text for contrast */
+      font-size: 14px;
+      margin-top: 40px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* .footer-top { */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* padding: 20px 40px; */
+    /* background-color: #444; */
+    /* Slightly lighter grey for the top section */
+    /* flex-wrap: wrap; */
+    /* } */
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #2C3E50;
+      /* Professional dark slate blue */
+      flex-wrap: wrap;
+      color: #ffffff;
+      /* Ensure text is readable */
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-links li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links li a:hover {
+      color: #4CAF50;
+      /* Green color on hover for links */
+    }
+
+    .footer-social a {
+      margin-left: 15px;
+      color: #fff;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      color: #4CAF50;
+      /* Green color on hover for social media icons */
+    }
+
+    .footer-bottom {
+      background-color: #222;
+      /* Darker background for the bottom */
+      text-align: center;
+      padding: 15px 20px;
+      color: #aaa;
+      /* Lighter grey for footer text */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .footer-top {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .footer-social {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Accessibility Bar -->
+  <div class="accessibility-bar">
+    <div class="font-controls">
+      <a href="#" onclick="changeFontSize('decrease')">A</a>
+      <a href="#" onclick="changeFontSize('normal')">A</a>
+      <a href="#" onclick="changeFontSize('increase')">A</a>
+    </div>
+    <div class="time-language">
+      <span id="current-time">4:02:50 pm</span>
+      <select class="language-selector">
+        <option value="mr">मराठी</option>
+        <option value="en">English</option>
+        <option value="hi">हिंदी</option>
+      </select>
+    </div>
+  </div>
+
+
+
+  <!-- Header -->
+  <div class="header">
+    <img src="images/download.png" alt="Maharashtra Building Workers Welfare Board Logo" class="logo">
+    <div class="board-title">
+      <h1>महाराष्ट्र इमारत व इतर बांधकाम कामगार कल्याणकारी मंडळ</h1>
+      <h2>Maharashtra Building And Other Construction Workers Welfare Board</h2>
+    </div>
+    <div class="govt-logos">
+      <img src="images/2.png" alt="Maharashtra Government Logo" class="logo">
+      <img src="images/3.png" alt="Government of India Logo" class="logo">
+    </div>
+  </div>
+
+
+
+
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="aboutus.html" class="dropdown-toggle">About Us</a></li>
+      <li><a href="#" class="dropdown-toggle">Workers</a></li>
+      <li><a href="#" class="dropdown-toggle">Resolutions and Notifications</a></li>
+      <li><a href="#" class="dropdown-toggle">Citizen Charter</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Download</a></li>
+      <li><a href="#" class="dropdown-toggle">Benefits Distributed</a></li>
+      <li><a href="#" class="dropdown-toggle">More</a></li>
+      <li><a href="login.html">Login</a></li> <!-- Corrected link -->
+    </ul>
+  </nav>
+
+
+  <!-- Marquee Section -->
+  <div class="marquee-container">
+    <div class="marquee-text">
+      नवीन नोंदणी/नूतनीकरण अर्ज संपर्क प्रणालीवर सादर करण्याकरिता संबंधित बांधकाम कामगारांनी आपल्या मूळ कागदपत्रांसह
+      नजिकच्या तालुका कामगार सुविधा केंद्रात संपर्क साधावे.
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Important Notice -->
+    <div class="notice">
+      <p>मंडळाच्या आदेशानुसार दिनांक ५ फेब्रुवारी २०२५ पासून तालुका सुविधा केंद्रात डेटा एंट्रीचे काम बंद करण्यात येत
+        आहे. बांधकाम कामगार आपले नोंदणी, नूतनीकरण व लाभाचे अर्ज online पद्धतीने आपल्या सोयीच्या जागेवरून भरू शकतील. अर्ज
+        भरल्यावर कागदपत्रांच्या पडताळणीसाठी कामगारांना आपल्या सोयीची तारीख निवडावी लागेल. ६ फेब्रुवारी २०२५ पासून ह्या
+        तारखा निवडण्याची सुविधा दिलेली आहे. निवडलेल्या तारखेस मूळ कागदपत्रांसह निवडलेल्या सुविधा केंद्रावर हजर रहावे
+        लागेल. ठरलेल्या तारखेस व ठिकाणी हजर न राहिल्यास अर्ज नामंजूर करण्यात येतील.</p>
+      <h2>लाभाच्या कागदपत्रांच्या पडताळणीसाठी जागा व तारीख निवडण्याबाबत:</h2>
+      <p>ज्या लोकांनी IWBMS प्रणालीमध्ये कागदपत्रांच्या पडताळणीसाठी अगोदरच तारीख घेतलेली आहे त्यांची ती तारीख रद्द
+        करण्यात आलेली आहे. आता ते कामगार भरलेल्या लाभाच्या अर्जाच्या कागदपत्रांच्या पडताळणीसाठी दिलेल्या लिंकवरून नवीन
+        तारीख निवडू शकतात.</p>
+      <p>रद्द झालेल्या तारखेऐवजी नवीन तारीख निवडण्यासाठी "Change Claim Appointment Date" हा बटणावर क्लीक करावे. सिस्टिम
+        तुम्हाला तुमचा नोंदणी क्रमांक विचारेल. नोंदणी क्रमांक भरल्यावर तुम्ही रजिस्टर केलेल्या मोबाईल वर एक OTP येईल.
+        OTP पडताळल्यानंतर तुम्हाला ज्या लाभाच्या अर्जांची तारीख बदलायची आहे त्याचा पोचपावती क्रमांक भरावयाचा आहे.
+        त्यानंतर तुम्ही कागदपत्रांच्या पडताळणीसाठी जागा व दिनांक निवडू शकता. त्यानंतर अर्ज प्रणालीमध्ये सबमिट करू शकता.
+      </p>
+    </div>
+
+    <div class="slider">
+      <div class="slides">
+        <img src="images/8.png" alt="Building Construction">
+        <img src="images/3.avif" alt="Crane and Skyscraper">
+        <img src="images/9.png" alt="Engineers on Site">
+      </div>
+    </div>
+    <div class="dots">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <!-- Service Icons -->
+    <div class="service-icons">
+      <a href="registration.html" class="service-icon">
+        <i class="fas fa-id-card"></i>
+        Construction Worker Registration
+      </a>
+      <a href="#" class="service-icon">
+        <i class="fas fa-file-alt"></i>
+        Construction Worker: Apply Online for Claim
+      </a>
+      <a href="#" class="service-icon">
+        <i class="fas fa-sync"></i>
+        Construction Worker Online Renewal
+      </a>
+      <a href="#" class="service-icon">
+        <i class="far fa-calendar-alt"></i>
+        Change appointment date for Claim
+      </a>
+      <a href="#" class="service-icon">
+        <i class="fas fa-user-edit"></i>
+        Update Your Construction Worker Registration
+      </a>
+      <a href="#" class="service-icon">
+        <i class="fas fa-sign-in-alt"></i>
+        Construction Worker-Profile Login
+      </a>
+    </div>
+
+    <!-- Regulations Section -->
+    <div class="regulations">
+      <h2>Employment Regulations and Service Conditions</h2>
+      <p>The following Acts / Rules have been issued by the Central and State Government to regulate the employment and
+        services of the building and other construction workers and for their safety, health and welfare.</p>
+      <ul>
+        <li><a href="#">The building and other construction workers' (Regulation of employment and conditions of
+            service) act, 1996</a></li>
+        <li><a href="#">The building and other construction workers' welfare cess act, 1996</a></li>
+        <li><a href="#">The building and other construction workers' welfare cess rules, 1998</a></li>
+        <li><a href="#">The building and other construction workers' (Regulation of employment and conditions of
+            service) central rules, 1998</a></li>
+        <li><a href="#">The Maharashtra building and other construction workers' (Regulation of employment and
+            conditions of service) central rules, 2007</a></li>
+      </ul>
+    </div>
+
+    <!-- Collapsible Sections -->
+    <button class="collapsible">Construction Workers Registration</button>
+    <div class="collapsible-content">
+      <div style="padding: 15px;">
+        <h3>Registration Requirements</h3>
+        <p>To register as a construction worker, the applicant must:</p>
+        <ul>
+          <li>Be between 18 and 60 years of age</li>
+          <li>Have worked in construction for at least 90 days in the past year</li>
+          <li>Submit necessary documents including Aadhar card, bank details, and proof of work</li>
+        </ul>
+        <p>Registration fee: Rs. 60/- (Annual)</p>
+      </div>
+    </div>
+
+    <button class="collapsible">Important provisions in the Building and Other Construction Workers Act</button>
+    <div class="collapsible-content">
+      <div style="padding: 15px;">
+        <h3>Key Provisions</h3>
+        <p>The act provides for:</p>
+        <ul>
+          <li>Formation of Welfare Boards at state level</li>
+          <li>Collection of cess from employers</li>
+          <li>Safety standards at construction sites</li>
+          <li>Registration of workers, employers and establishments</li>
+          <li>Welfare schemes for registered workers</li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="collapsible">Cess Info</button>
+    <div class="collapsible-content">
+      <div style="padding: 15px;">
+        <h3>Cess Collection</h3>
+        <p>A cess at the rate of 1% of the construction cost is collected from employers. This fund is used for:</p>
+        <ul>
+          <li>Immediate assistance to workers in case of accidents</li>
+          <li>Healthcare benefits to workers and their families</li>
+          <li>Education scholarships for children of construction workers</li>
+          <li>Pension for senior workers</li>
+          <li>Other welfare schemes</li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="collapsible">Establishment / Construction Owner / Developer Registration</button>
+    <div class="collapsible-content">
+      <div style="padding: 15px;">
+        <h3>Employer Registration</h3>
+        <p>All construction establishments, owners, and developers must register with the board if the project cost
+          exceeds Rs. 10 lakhs. The registration requires:</p>
+        <ul>
+          <li>Details of the establishment/project</li>
+          <li>Estimated cost of construction</li>
+          <li>Number of workers employed</li>
+          <li>Duration of the project</li>
+          <li>Payment of applicable cess</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="contact-section">
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <div class="contact-details">
+          <h3>Phone</h3>
+          <p>(022) 2657-2631</p>
+          <p>(022) 2657-2632</p>
+          <p>For additional information</p>
+          <p><a href="tel:7400012262">7400012262</a></p>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="contact-details">
+          <h3>Email</h3>
+          <p><a href="mailto:bocwwboardmaha@gmail.com">bocwwboardmaha@gmail.com</a></p>
+          <p><a href="mailto:support@mahabocw.in">support@mahabocw.in</a></p>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-headset"></i>
+        </div>
+        <div class="contact-details">
+          <h3>Helpdesk toll free number</h3>
+          <p>(10:00 to 18:00)</p>
+          <p><a href="tel:1800-8892-816">1800-8892-816</a></p>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">
+          <i class="fas fa-building"></i>
+        </div>
+        <div class="contact-details">
+          <h3>Office</h3>
+          <p>Maharashtra Building And Other Construction Worker's Welfare Board,</p>
+          <p>5th Floor, MMTC House,</p>
+          <p>Plot C-22, E-Block,</p>
+          <p>Bandra Kurla Complex, Bandra(E),</p>
+          <p>Mumbai – 400051,</p>
+          <p>Maharashtra</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <ul class="footer-links">
+        <li><a href="#">Introduction</a></li>
+        <li><a href="#">Sitemap</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Important Links</a></li>
+        <li><a href="#">Disclaimer & Policies</a></li>
+        <li><a href="#">Screen Reader Access</a></li>
+      </ul>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 <strong>Maharashtra Building And Other Construction Workers' Welfare Board</strong> | This is a W3C
+        compliant website.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Update Current Time
+    function updateTime() {
+      const now = new Date();
+      let hours = now.getHours();
+      const minutes = now.getMinutes().toString().padStart(2, '0');
+      const seconds = now.getSeconds().toString().padStart(2, '0');
+      const ampm = hours >= 12 ? 'pm' : 'am';
+
+      hours = hours % 12;
+      hours = hours ? hours : 12; // hour '0' should be '12'
+
+      document.getElementById('current-time').textContent = `${hours}:${minutes}:${seconds} ${ampm}`;
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime();
+
+    // Font Size Adjustment
+    function changeFontSize(action) {
+      const body = document.body;
+      const currentSize = window.getComputedStyle(body).fontSize;
+      const currentSizeValue = parseFloat(currentSize);
+
+      if (action === 'increase') {
+        body.style.fontSize = (currentSizeValue * 1.1) + 'px';
+      } else if (action === 'decrease') {
+        body.style.fontSize = (currentSizeValue * 0.9) + 'px';
+      } else {
+        body.style.fontSize = '16px'; // Reset to default
+      }
+    }
+
+    // Collapsible Sections
+    const collapsibles = document.getElementsByClassName('collapsible');
+    for (let i = 0; i < collapsibles.length; i++) {
+      collapsibles[i].addEventListener('click', function () {
+        this.classList.toggle('collapsible-active');
+        const content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    }
+
+    // Language Selector
+    document.querySelector('.language-selector').addEventListener('change', function () {
+      // In a real implementation, this would trigger a language change
+      // For demo purposes, we're just showing an alert
+      alert('Language changed to: ' + this.value);
+    });
+
+    // Marquee Pause on Hover
+    const marquee = document.querySelector('.marquee-text');
+    marquee.addEventListener('mouseover', function () {
+      this.style.animationPlayState = 'paused';
+    });
+    marquee.addEventListener('mouseout', function () {
+      this.style.animationPlayState = 'running';
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IWBMS Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .logo {
+      width: 80px;
+    }
+
+    .title {
+      flex: 1;
+    }
+
+    .title h1 {
+      color: blue;
+      margin: 5px 0;
+      font-size: 24px;
+    }
+
+    .title h2 {
+      margin: 0;
+      font-size: 18px;
+      color: #800000;
+    }
+
+    .govt-symbols img {
+      height: 60px;
+      margin: 0 10px;
+    }
+
+    .login-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .login-box {
+      background: white;
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 30px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .login-box form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .login-box label {
+      text-align: left;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .login-box input {
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .login-box button {
+      padding: 10px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .login-box button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <img src="images/download.png" alt="Board Logo" class="logo">
+      <div class="title">
+        <h1>महाराष्ट्र इमारत व इतर बांधकाम कामगार कल्याणकारी मंडळ</h1>
+        <h2>Maharashtra Building And Other Construction Worker's Welfare Board</h2>
+      </div>
+      <div class="govt-symbols">
+        <img src="images/3.png" alt="Symbol 1">
+        <img src="images/2.png" alt="Symbol 2">
+      </div>
+    </div>
+  </header>
+
+  <section class="login-section">
+    <h2>Login To IWBMS</h2>
+    <div class="login-box">
+      <form onsubmit="handleLogin(event)">
+        <label for="email">Email ID</label>
+        <input type="email" id="email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
